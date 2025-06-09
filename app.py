@@ -48,14 +48,9 @@ def recettes_possibles(presents):
             valides.append(recette)
     return valides
 
-@app.route("/", methods=["GET", "POST"])
-def index():
-    selected = []
-    result = []
-    if request.method == "POST":
-        selected = request.form.getlist("athletes")
-        result = recettes_possibles(selected)
-    return render_template("index.html", athletes=athletes.keys(), selected=selected, result=result)
+@app.route("/", methods=["GET", "HEAD"])
+def home():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
