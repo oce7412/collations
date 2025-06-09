@@ -49,6 +49,5 @@ def recettes_possibles(presents):
     return valides
 
 
-# Exemple d'utilisation
-present_athletes = ["Titia", "Clémence", "Lotte", "Valentina", "Maurène", "Michaela", "Marjolein"]
-print("Il y a", len(recettes_possibles(present_athletes)),"recettes compatibles :", recettes_possibles(present_athletes))
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
