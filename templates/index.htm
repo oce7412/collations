@@ -9,30 +9,32 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="requirements_fichiers/filelist.xml">
+<link rel=File-List href="index_fichiers/filelist.xml">
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>Oceane Mahe</o:Author>
   <o:LastAuthor>Oceane Mahe</o:LastAuthor>
   <o:Revision>1</o:Revision>
-  <o:TotalTime>2</o:TotalTime>
-  <o:Created>2025-06-09T19:49:00Z</o:Created>
-  <o:LastSaved>2025-06-09T19:51:00Z</o:LastSaved>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2025-06-09T20:16:00Z</o:Created>
+  <o:LastSaved>2025-06-09T20:17:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Characters>5</o:Characters>
-  <o:Lines>1</o:Lines>
+  <o:Words>121</o:Words>
+  <o:Characters>666</o:Characters>
+  <o:Lines>5</o:Lines>
   <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>5</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>786</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
 </xml><![endif]-->
-<link rel=themeData href="requirements_fichiers/themedata.thmx">
-<link rel=colorSchemeMapping href="requirements_fichiers/colorschememapping.xml">
+<link rel=themeData href="index_fichiers/themedata.thmx">
+<link rel=colorSchemeMapping href="index_fichiers/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
   <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
@@ -1487,6 +1489,9 @@ span.CitationintenseCar
 	mso-themecolor:accent1;
 	mso-themeshade:191;
 	font-style:italic;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -1558,7 +1563,96 @@ div.WordSection1
 
 <div class=WordSection1>
 
-<p class=MsoNormal>flask</p>
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;!DOCTYPE
+html&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;html&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;head&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span>&lt;title&gt;Recettes
+compatibles&lt;/title&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal>&lt;/<span class=SpellE>head</span>&gt;<o:p></o:p></p>
+
+<p class=MsoNormal>&lt;body&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>   
+</span>&lt;h1&gt;Choisissez les athlètes présents&lt;/h1&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>&lt;form method=&quot;POST&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>        </span>{% for nom in athletes %}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>&lt;label&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>                </span>&lt;input
+type=&quot;checkbox&quot; name=&quot;athletes&quot; value=&quot;{{ nom }}&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>                    </span>{% if nom in selected
+%}checked{% endif %}&gt; {{ nom }}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span></span>&lt;/label&gt;&lt;<span
+class=SpellE>br</span>&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span>{% <span
+class=SpellE>endfor</span> %}<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span>&lt;<span
+class=SpellE>br</span>&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span>&lt;<span
+class=SpellE>button</span> type=&quot;<span class=SpellE>submit</span>&quot;&gt;Voir
+les recettes compatibles&lt;/<span class=SpellE>button</span>&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>&lt;/form&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span>{% if result %}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>        </span>&lt;h2&gt;Recettes compatibles
+:&lt;/h2&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>        </span>&lt;ul&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>{% for recette in result %}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>                </span>&lt;li&gt;{{ recette
+}}&lt;/li&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>{% endfor %}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>        </span>&lt;/ul&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span></span>{% <span class=SpellE>elif</span> <span
+class=SpellE>selected</span> %}<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>       
+</span>&lt;p&gt;Aucune recette compatible.&lt;/p&gt;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>    </span>{% <span
+class=SpellE>endif</span> %}<o:p></o:p></p>
+
+<p class=MsoNormal>&lt;/body&gt;<o:p></o:p></p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
 
 </div>
 
