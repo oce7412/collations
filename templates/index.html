@@ -6,9 +6,12 @@
 </head>
 <body>
     <h1>Recettes compatibles</h1>
+
+    <p><strong>Coureuses disponibles :</strong> {{ tous_athletes | join(", ") }}</p>
+
     <form method="post">
-        <label>Nom des athlètes présents (séparés par des virgules) :</label><br />
-        <input type="text" name="athletes" style="width: 300px;" required />
+        <label>Quelles coureuses sont présentes sur la course ? (séparées par des virgules) :</label><br />
+        <input type="text" name="athletes" style="width: 400px;" required />
         <button type="submit">Chercher</button>
     </form>
 
@@ -16,8 +19,8 @@
         <h2>Résultats :</h2>
         {% if recettes %}
             <ul>
-                {% for recette in recettes %}
-                    <li>{{ recette }}</li>
+                {% for nom, ingredients in recettes.items() %}
+                    <li><strong>{{ nom }}</strong> = {{ ingredients | join(", ") }}</li>
                 {% endfor %}
             </ul>
         {% else %}
