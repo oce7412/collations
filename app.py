@@ -7,6 +7,6 @@ app = Flask(__name__)
 port = int(os.environ.get("PORT", 5000))
 app.run(host="0.0.0.0", port=port)
 
-@app.route("/", methods=["GET", "HEAD"])
+@app.route("/")
 def home():
-    return render_template("index.html")
+    return "Bienvenue sur l'app Flask"
