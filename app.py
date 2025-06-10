@@ -10,3 +10,4 @@ app.run(host="0.0.0.0", port=port)
 @app.route("/")
 def home():
     return "Bienvenue sur l'app Flask"
+
