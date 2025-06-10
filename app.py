@@ -18,7 +18,7 @@ athletes = {
     "Océane": {"salade", "noix", "jambon cru", "guacamole", "noix de cajou", "poivrons"},
 }
 
-recipes = {
+recettes = {
     "Salade riz-thon": {"riz", "thon", "maïs", "avocat" "sauce au yaourt"},
     "Salade de pâtes au pesto": {"pâtes", "pesto", "jambon blanc", "tomates", "mozzarella"},
     "Pâtes au saumon": {"pâtes", "saumon", "fromage blanc"},
