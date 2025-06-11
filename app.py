@@ -50,8 +50,7 @@ recettes = {
 def home():
     recettes_trouvees = None
     if request.method == "POST":
-        noms = request.form["athletes"]
-        presents = [nom.strip() for nom in noms.split(",") if nom.strip()]
+        presents = request.form.getlist("athletes")
         blacklist = set()
         for nom in presents:
             blacklist |= athletes.get(nom, set())

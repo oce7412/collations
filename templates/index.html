@@ -2,17 +2,83 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>Recettes compatibles</title>
+    <title>Arkéa B&B Hôtels - Recettes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #c00000;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            border: 2px solid #c00000;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .checkbox-group label {
+            width: 45%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #c00000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a00000;
+        }
+
+        ul {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        li {
+            background-color: #eee;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-left: 4px solid #c00000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Recettes compatibles</h1>
-
-    <p><strong>Coureuses disponibles :</strong> {{ tous_athletes | join(", ") }}</p>
+    <h1>Arkéa B&B Hôtels - Recettes de sportifs</h1>
+    <h2>Trouver les recettes compatibles avec l'équipe présente</h2>
 
     <form method="post">
-        <label>Quelles coureuses sont présentes sur la course ? (séparées par des virgules) :</label><br />
-        <input type="text" name="athletes" style="width: 400px;" required />
-        <button type="submit">Chercher</button>
+        <div class="checkbox-group">
+            {% for nom in tous_athletes %}
+                <label><input type="checkbox" name="athletes" value="{{ nom }}"> {{ nom }}</label>
+            {% endfor %}
+        </div>
+        <br>
+        <button type="submit">Afficher les recettes compatibles</button>
     </form>
 
     {% if recettes is not none %}
@@ -24,7 +90,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-            <p>Aucune recette compatible trouvée.</p>
+            <p style="text-align:center;">Aucune recette compatible trouvée.</p>
         {% endif %}
     {% endif %}
 </body>
